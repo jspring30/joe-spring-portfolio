@@ -1,0 +1,554 @@
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
+.section a {
+    text-align: center;
+    font-size: 6rem;
+    font-family: "VT323";
+    color: white;
+    /* background: black; */
+    padding: 20px;
+    margin: 15px;
+    margin-top: 0px;
+    z-index: 1;
+    animation: blink 1s infinite;
+}
+
+.section a:hover {
+    color: #f2efac;
+    /* background: -webkit-linear-gradient(#f2efac, #bbe0f1); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+.video-container video {
+    /* Make video to at least 100% wide and tall */
+    min-width: 100%;
+    min-height: 100%;
+
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    /* width: 120%; */
+    /* height: 120%; */
+    width: 135%;
+    height: auto;
+
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .header{
+      width: 100%;
+      height: 10vh;
+      display: block;
+      background-color: white;
+  }
+  .header img {
+    padding-left: 12px;
+    float: left;
+    width: 10vw;
+    height: 10vh;
+    /* background: #555; */
+}
+
+
+  .inner_header{
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+  }
+
+  .navigation{
+      float: right;
+      height: 100%;
+      padding-right: 40px;
+      padding-top: 5px;
+  }
+
+  .navigation a{
+      height: 100%;
+      display: table;
+      float: left;
+      padding-left: 50px;
+
+  }
+
+  .navigation a li{
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+      color: black;
+      font-size: 3vw;
+      font-family: "VT323";
+      overflow: hidden;
+  }
+
+  .navigation li:hover {
+    color: #9bc3ff;
+  }
+
+  .hometext{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    padding-top: 1px;
+    width: 100%;
+    height: 100%;
+    font-size: 19vw;
+    font-family: "VT323";
+    color: rgb(236, 236, 236);
+    z-index: 0;
+    width: 70%;
+
+  }
+
+  .mousepos {
+      position: absolute;
+      text-align: center;
+      padding-top: 0.1vh;
+      width: 100%;
+      height: 100%;
+      font-size: 20vw;
+      font-family: "VT323";
+      color: rgb(228, 228, 228);
+      z-index: -2;
+  }
+  .line-1{
+    position: absolute;
+    /* top: 15%; */
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    border-right: 10px solid rgba(0, 0, 0, 0.75);
+    font-size: 78%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    color: rgb(19, 19, 19);
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 1.5s steps(9) 1s 1 normal both,
+             blinkTextCursor 700ms steps(9) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 53.5vw;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0, 0, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
+
+.welcomepara{
+    /* position: relative; */
+    padding-top: 5vw;
+    font-size: 2vw;
+    color: black;
+    width: 55vw;
+    text-align: left;
+    margin-left: 1%;
+    opacity: 0;
+    max-width: 53vw;
+    -moz-animation: fadein 2s ease-in 2.5s forwards; /* Firefox */
+    -webkit-animation: fadein 2s ease-in 2.5s forwards; /* Safari and Chrome */
+    -o-animation: fadein 2s ease-in 2.5s forwards; /* Opera */
+    animation: fadein 2s ease-in 2.5s forwards;
+    font-family: "VT323";
+    z-index: 2;
+    padding-left: 0.5vw;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+.blobflow{
+    position: absolute;
+    padding-bottom: 30%;
+    right: 0%;
+    z-index: -3;
+    outline: none;
+    width: 100%;
+}
+.blobflow video{
+    width: 40%;
+    height: 40%;
+    float: right;
+}
+
+.ballmorph{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.ballmorph video{
+    height: 25%;
+    width: 25%;
+    padding-top: 3vh;
+    float: right;
+}
+
+html,
+body {
+ 
+    overflow: auto;
+   
+}
+
+.vectors{
+    position: absolute;
+    width: 88%;
+    z-index: 3;
+}
+
+.vectors img{
+    height: 10%;
+    width: 10%;
+    padding-top: 60vh;
+    float: right;
+}
+
+.spintag{
+    position: absolute;
+    z-index: 3;
+}
+
+.spintag img{
+    width: 15vw;
+    float: left;
+    padding-top: 45vh;
+    padding-left: 10vw;
+}
+
+.about_title{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    padding-top: 2%;
+}
+
+.about_title video {
+    height: 28%;
+    width: 28%;
+    float: right;
+}
+
+.about_para{
+    position: absolute;
+    font-family: "VT323";
+    width: 47%;
+    text-align: right;
+    float: right;
+    padding-left: 52%;
+    padding-top: 10%;
+    opacity: 0;
+    -moz-animation: fadein 2s ease-in 1s forwards; /* Firefox */
+    -webkit-animation: fadein 2s ease-in 1s forwards; /* Safari and Chrome */
+    -o-animation: fadein 2s ease-in 1s forwards; /* Opera */
+    animation: fadein 2s ease-in 1s forwards;
+}
+
+.about_para h1{
+    font-size: 5vw;
+}
+.about_para h2{
+    font-size: 2.5vw;
+}
+.about_para p{
+    font-size: 2vw;
+}
+
+.car{
+    position: absolute;
+    z-index: -2;
+    padding-left: 40%;
+}
+.car video{
+    height: 50%;
+    width: 50%;
+}
+
+.projects_title video {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 22%;
+    width: 22%;
+    /* position: absolute; */
+    z-index: -3;
+    
+}
+
+body.cow_catcher {
+    height: 100%;
+    overflow: hidden;
+}
+
+.cc_background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
+}
+
+.cc_background video{
+    width: 100%;
+}
+
+.cowtitle{
+    width: 100%;
+    height: 100%;
+    padding-left: 14%;
+    padding-top: 3%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.cowtitle video {
+    height: 70%;
+    width: 70%;
+    overflow: hidden;
+}
+
+.cowtext {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    padding-top: 1%;
+}
+
+.cowtext video{
+    width: 37%;
+    height: 37%;
+    float: right;
+}
+
+
+.contact_title{
+    position: relative;
+    top: 12%;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    right: 2%;
+}
+
+.contact_title video{
+    width: 100%; 
+    height: auto; 
+}
+
+.phone_spin{
+    position: absolute;
+    top: 15%;
+    width: 50%;
+    height: 100%; 
+    overflow: hidden;
+    right: 0%;
+    z-index: 1;
+}
+.phone_spin video{
+    height: 110%;
+    width: 110%;
+}
+
+.email{
+    position: absolute;
+    top: 65%;
+    width: 22%;
+    height: 22%; 
+    overflow: hidden;
+    left: 14%;
+    z-index: -2;
+}
+.email video{
+    height: 100%;
+    width: 100%;
+}
+
+.contact_para{
+    position: absolute;
+    text-align: left;
+    top: 28%;
+    left: 10%;
+    font-family: "VT323";
+    font-size: 3vw;
+    opacity: 0;
+    background-color: rgb(255, 255, 255);
+    -moz-animation: fadein 2s ease-in 0s forwards; /* Firefox */
+    -webkit-animation: fadein 2s ease-in 0s forwards; /* Safari and Chrome */
+    -o-animation: fadein 2s ease-in 0s forwards; /* Opera */
+    animation: fadein 2s ease-in 0s forwards;
+}
+
+.contact_para .pre{
+    align-self: center;
+}
+
+.infinity{
+    width: 100%;
+    height: 100%;
+}
+.infinity video{
+    width: 100%;
+    height: 100%;
+}
+
+.picture{
+    width: 30%;
+    height: 30%;
+    position: relative;
+    padding-top: 5%;
+    padding-left: 8%;
+}
+.picture video{
+    width: 100%;
+    height: 100%;
+}
+
+.projectstitle {
+    width: 100vw;
+    display: block;
+    max-width: 100%;
+   overflow-x: hidden;
+}
+
+.projectstitle video{
+    width: 25%;
+    height: 25%;
+    padding-left:38%;
+    padding-right: auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vw;
+    align-items: center;
+}
+
+.wrapper img{
+width: 70%;
+height: auto;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.reeltitle {
+    font-size: 3vw;
+    font-family: "VT323";
+    color: black;
+    text-align: right;
+}
+
+.reeldesc {
+    font-size: 1.5vw;
+    font-family: "VT323";
+    color: black;
+    text-align: left;
+}
+
+.moblielogo {
+    display: block;
+    width: 100%;
+}
+
+.moblielogo img {
+    width: 20%;
+    height: auto;
+    align-items: center;
+    padding-left: 40%;
+    padding-top: 5%;
+}
+
+.mobilepara {
+    font-size: 2.5vw;
+    font-family: "VT323";
+    color: black;
+    text-align: center;
+    padding: 5%;
+    padding-top: 1%;
+}
+
+.mobliecontact {
+    padding-top: 5%;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    z-index: -2;
+
+}
+
+.mobliecontact video{
+    width: 100%;
+    position: absolute;
+    right: 39%;
+    padding-top: 3%;
+    z-index: -2;
+}
+
+.mobileinfo {
+    width: 90vw;
+    padding-top: 13%;
+    padding-bottom: 5%;
+    z-index: 2;
+}
+
+.mobileinfo pre{
+    font-family: "VT323";
+    font-size: 3vw;
+    text-align: center;
+}

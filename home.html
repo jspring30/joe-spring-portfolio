@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <html style='overflow: hidden !important;'>
+</html>
+
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
+<title>Home</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico?v=2"  />
+
+<script type="text/javascript">
+    if (screen.width <= 699) {
+    document.location = "mobile.html";
+    }
+
+    </script>
+</head>
+
+<body>
+    <div class = "header">
+        <img src="logo_border.png" alt="logo_border">
+           
+        <div class= "inner_header">
+            <ul class= "navigation">
+                <a href="home.html" style="text-decoration:none"><li>HOME</li></a>
+                <a href="about.html" style="text-decoration:none"><li>ABOUT</li></a>
+                <a href="projects.html" style="text-decoration:none"><li>PROJECTS</li></a>
+                <a href="cow_catcher.html" style="text-decoration:none"><li>COW_CATCHER</li></a>
+                <a href="contact.html" style="text-decoration:none"><li>CONTACT</li></a>
+            </ul>
+        </div>
+    </div>
+    
+    <div class = "mousepos">
+        <p>
+            X: <span id= "x-value"></span>
+        </p>
+        <p>
+            Y: <span id= "y-value"></span>
+        </p>
+        <script type="text/javascript">
+            window.addEventListener('mousemove', function (e) {
+                document.getElementById('x-value').textContent = e.x;
+                document.getElementById('y-value').textContent = e.y;
+            });
+        </script>
+    </div>
+
+    <div class="hometext">
+        <p class="line-1 anim-typewriter">>WELCOME.</p>
+
+        <p class="welcomepara"> Hello, and welcome to my website. Here you will find a collection of my work,
+            information about myself as well as my contact information. 
+            Thanks for stopping by!
+        </p>
+    </div>
+    
+    <div class="blobflow">
+        <video autoplay loop muted preload="auto">
+            <source src="Blobflow-1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="ballmorph">
+        <video autoplay loop muted preload="auto">
+            <source src="ballmorph.webm" type="video/webm">
+        </video>
+    </div>
+
+    <div class="vectors">
+        <img src="vectors.gif" alt="vectors">
+    </div>
+
+    <div class="spintag">
+        <img src="spintag.gif" alt="spintag">
+    </div>
+</body>
+
+</html>
