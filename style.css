@@ -515,7 +515,7 @@ margin-right: auto;
 }
 
 .mobilepara {
-    font-size: 3vw;
+    font-size: 4vw;
     font-family: "VT323";
     color: black;
     text-align: center;
@@ -549,6 +549,6 @@ margin-right: auto;
 
 .mobileinfo pre{
     font-family: "VT323";
-    font-size: 3vw;
+    font-size: 4vw;
     text-align: center;
 }
