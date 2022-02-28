@@ -339,7 +339,7 @@ body.cow_catcher {
     z-index: -3;
 }
 
-.cc_background video{
+.cc_background img{
     width: 100%;
 }
 
