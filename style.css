@@ -51,7 +51,7 @@
     /* Setting width & height to auto prevents the browser from stretching or squishing the video */
     /* width: 120%; */
     /* height: 120%; */
-    width: 135%;
+    width: 100%;
     height: auto;
 
     /* Center the video */
